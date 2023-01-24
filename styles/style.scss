@@ -1,0 +1,143 @@
+$h: 220;
+$s: 70%;
+$base2:hsl(220, 70%, 31%);
+$gradient-0:  hsl($h, $s, 24%);
+$gradient-1:  hsl($h, $s, 27%);
+$gradient-2:  hsl($h, $s, 30%);
+$gradient-3:  hsl($h, $s, 33%);
+$gradient-4:  hsl($h, $s, 36%);
+$gradient-5:  hsl($h, $s, 39%);
+$gradient-6:  hsl($h, $s, 42%);
+$gradient-7:  hsl($h, $s, 45%);
+$gradient-8:  hsl($h, $s, 48%);
+$gradient-9:  hsl($h, $s, 51%);
+$gradient-10: hsl($h, $s, 54%);
+$gradient-11: hsl($h, $s, 57%);
+$dark: hsl(220, 0%, 8%);
+$dark-gray: hsl(220, 0%, 4%);
+$rock-0: rgb(196, 199, 27);
+$rock-1: rgb(185, 21, 21);
+$rock-2: rgb(72, 111, 20);
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    // outline: 1px solid salmon;
+}
+
+.move-button {
+    position: absolute;
+    top: 50%;
+}
+.div-waves {
+    background:conic-gradient(from 164deg at -10% -10%, rgba(130, 160, 238, 1) 76%, rgba(182, 202, 255, 1) 87%, rgba(130, 160, 238, 1) 100%);
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+    .header-waves {
+        position: relative;
+        top: 0%;
+        left: -10%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    
+        .wave-0  {fill: $gradient-0;}
+        .wave-1  {fill: $gradient-1;}
+        .wave-2  {fill: $gradient-2;}
+        .wave-3  {fill: $gradient-3;}
+        .wave-4  {fill: $gradient-4;}
+        .wave-5  {fill: $gradient-5;}
+        .wave-6  {fill: $gradient-6;}
+        .wave-7  {fill: $gradient-7;}
+        .wave-8  {fill: $gradient-8;}
+        .wave-9  {fill: $gradient-9;}
+        .wave-10  {fill: $gradient-10;}
+        .wave-11  {fill: $dark}
+        // .wave-0  {fill: #134498;}
+        // .wave-1  {fill: #154b9e;}
+        // .wave-2  {fill: #1853a4;}
+        // .wave-3  {fill: #1b5aaa;}
+        // .wave-4  {fill: #2062b0;}
+        // .wave-5  {fill: #2469b6;}
+        // .wave-6  {fill: #2a71bc;}
+        // .wave-7  {fill: #2f78c1;}
+        // .wave-8  {fill: #3680c7;}
+        // .wave-9  {fill: #3c88cc;}
+        // .wave-10  {fill: #438fd2;}
+        // .wave-11  {fill: #4a97d7;}
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 3rem;
+        li {
+            color: rgb(198, 191, 191);
+        }
+    }
+}
+.content-container {   
+    margin-top: 224px;
+    overflow: hidden;
+    width: 100vw;
+    height: auto;
+    background: $dark;
+    position: absolute;
+   
+    .content-1 {
+        background: $dark-gray;
+        width: 80vw;
+        padding: 2rem;
+        margin-top: 2rem;
+        p {
+            color: white;
+            font-size: 2rem;
+            
+        }
+        :last-child {
+                text-align: right;
+            }
+    }
+}
+
+footer {
+    outline: 1px solid green;
+    padding-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    background: rgb(1, 1, 12);
+    bottom: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 224px;
+    overflow: hidden;
+    .footer-content{
+        outline: 1px solid black;
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        background: $rock-2;
+        display: flex;
+        padding: 1rem 2rem;
+        justify-content: space-between;
+    }
+    .svg-rocks-footer {
+        outline: 3px solid red;
+        border: 2px solid yellow;
+        position: fixed;
+        bottom: 0%;
+        width: 100vw;
+        .rock-0 {fill:$rock-0;}
+        .rock-1 {fill:$rock-1;}
+        .rock-2 {fill:$rock-2;}
+    }
+}
+
+.translateX-20 {
+    transform: translateX(20px);
+}

@@ -31,7 +31,7 @@ $rock-2: rgb(72, 111, 20);
     top: 50%;
 }
 .div-waves {
-    background:conic-gradient(from 164deg at -10% -10%, rgba(130, 160, 238, 1) 76%, rgba(182, 202, 255, 1) 87%, rgba(130, 160, 238, 1) 100%);
+    background: conic-gradient(from 164deg at -10% -10%, rgba(130, 160, 238, 1) 76%, rgba(182, 202, 255, 1) 87%, rgba(130, 160, 238, 1) 100%);
     position: absolute;
     width: 100vw;
     overflow: hidden;
@@ -69,17 +69,7 @@ $rock-2: rgb(72, 111, 20);
     }
 }
 
-nav {
-    ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        gap: 3rem;
-        li {
-            color: rgb(198, 191, 191);
-        }
-    }
-}
+
 .content-container {   
     margin-top: 224px;
     overflow: hidden;
@@ -88,6 +78,17 @@ nav {
     background: $dark;
     position: absolute;
    
+    nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 3rem;
+            li {
+                color: rgb(198, 191, 191);
+            }
+        }
+    }
     .content-1 {
         background: $dark-gray;
         width: 80vw;
@@ -105,11 +106,13 @@ nav {
 }
 
 footer {
-    outline: 1px solid green;
-    padding-bottom: 0px;
-    margin: 0px;
-    padding: 0px;
-    position: fixed;
+    background: black;
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+    
+        
+
     background: rgb(1, 1, 12);
     bottom: 0%;
     left: 0%;
@@ -118,19 +121,19 @@ footer {
     overflow: hidden;
     .footer-content{
         outline: 1px solid black;
-        position: absolute;
-        bottom: 0;
+        position: relative;
         width: 100vw;
-        background: $rock-2;
         display: flex;
         padding: 1rem 2rem;
         justify-content: space-between;
     }
     .svg-rocks-footer {
-        outline: 3px solid red;
-        border: 2px solid yellow;
-        position: fixed;
+        display: block;
+        position: relative;
         bottom: 0%;
+        left: -10%;
+        overflow-x: scroll;
+        overflow-y: hidden;
         width: 100vw;
         .rock-0 {fill:$rock-0;}
         .rock-1 {fill:$rock-1;}

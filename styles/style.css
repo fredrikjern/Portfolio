@@ -60,16 +60,6 @@
   fill: hsl(220deg, 0%, 8%);
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 3rem;
-}
-nav ul li {
-  color: rgb(198, 191, 191);
-}
-
 .content-container {
   margin-top: 224px;
   overflow: hidden;
@@ -77,6 +67,15 @@ nav ul li {
   height: auto;
   background: hsl(220deg, 0%, 8%);
   position: absolute;
+}
+.content-container nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+}
+.content-container nav ul li {
+  color: rgb(198, 191, 191);
 }
 .content-container .content-1 {
   background: hsl(220deg, 0%, 4%);
@@ -93,11 +92,10 @@ nav ul li {
 }
 
 footer {
-  outline: 1px solid green;
-  padding-bottom: 0px;
-  margin: 0px;
-  padding: 0px;
-  position: fixed;
+  background: black;
+  position: absolute;
+  width: 100vw;
+  overflow: hidden;
   background: rgb(1, 1, 12);
   bottom: 0%;
   left: 0%;
@@ -107,19 +105,19 @@ footer {
 }
 footer .footer-content {
   outline: 1px solid black;
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100vw;
-  background: rgb(72, 111, 20);
   display: flex;
   padding: 1rem 2rem;
   justify-content: space-between;
 }
 footer .svg-rocks-footer {
-  outline: 3px solid red;
-  border: 2px solid yellow;
-  position: fixed;
+  display: block;
+  position: relative;
   bottom: 0%;
+  left: -10%;
+  overflow-x: scroll;
+  overflow-y: hidden;
   width: 100vw;
 }
 footer .svg-rocks-footer .rock-0 {

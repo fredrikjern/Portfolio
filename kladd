@@ -1,0 +1,4 @@
+    let updatePerFrame = getDelta(endAngle,startAngle,frames);
+    let deltaX = getDelta(endX,startX,frames);
+    let deltaY = getDelta(highY,startY,frames)*2;
+    let deltaShadow = getDelta(bsEnd,bsStart,frames)

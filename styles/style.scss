@@ -1,25 +1,8 @@
 //variables
-$h: 220;
-$s: 70%;
-$base2: hsl(220, 70%, 31%);
-$gradient-0: hsl($h, $s, 24%);
-$gradient-1: hsl($h, $s, 27%);
-$gradient-2: hsl($h, $s, 30%);
-$gradient-3: hsl($h, $s, 33%);
-$gradient-4: hsl($h, $s, 36%);
-$gradient-5: hsl($h, $s, 39%);
-$gradient-6: hsl($h, $s, 42%);
-$gradient-7: hsl($h, $s, 45%);
-$gradient-8: hsl($h, $s, 48%);
-$gradient-9: hsl($h, $s, 51%);
-$gradient-10: hsl($h, $s, 54%);
-$gradient-11: hsl($h, $s, 57%);
 $dark: hsl(220, 0%, 8%);
 $dark-gray: hsl(220, 0%, 4%);
 $light-gray: hsl(220, 0%, 15%);
-$rock-0: rgb(196, 199, 27);
-$rock-1: rgb(185, 21, 21);
-$rock-2: rgb(72, 111, 20);
+
 * {
   margin: 0px;
   padding: 0px;
@@ -27,7 +10,6 @@ $rock-2: rgb(72, 111, 20);
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  
   background: $dark;
 }
 .div-waves {
@@ -51,23 +33,12 @@ body {
         fill: hsl(220, 70%, (31%+3 * $i));
       }
     }
-    // .wave-0  {fill: $gradient-0;}
-    // .wave-1  {fill: $gradient-1;}
-    // .wave-2  {fill: $gradient-2;}
-    // .wave-3  {fill: $gradient-3;}
-    // .wave-4  {fill: $gradient-4;}
-    // .wave-5  {fill: $gradient-5;}
-    // .wave-6  {fill: $gradient-6;}
-    // .wave-7  {fill: $gradient-7;}
-    // .wave-8  {fill: $gradient-8;}
-    // .wave-9  {fill: $gradient-9;}
-    // .wave-10  {fill: $gradient-10;}
     .wave-11 {
       fill: $dark;
     }
   }
 }
-main.content-container {
+main {
   margin-top: 222px;
   overflow: hidden;
   width: 100vw;
@@ -80,13 +51,11 @@ main.content-container {
       justify-content: center;
       list-style: none;
       gap: 3rem;
-
       .nav-link {
         font-size: 2rem;
         color: hsl(0, 6%, 76%);
         border-bottom: 1px solid $dark-gray;
         transition: ease-in-out 150ms;
-
         &:hover {
           color: hsl(0, 6%, 86%);
           border-bottom: 1px solid hsl(0, 6%, 16%);
@@ -109,51 +78,49 @@ main.content-container {
     }
   }
 }
+// footer {
+//   background: black;
+//   position: absolute;
+//   width: 100vw;
+//   overflow: hidden;
 
-footer {
-  background: black;
-  position: absolute;
-  width: 100vw;
-  overflow: hidden;
-
-  background: rgb(1, 1, 12);
-  bottom: 0%;
-  left: 0%;
-  width: 100vw;
-  height: 224px;
-  overflow: hidden;
-  .footer-content {
-    outline: 1px solid black;
-    position: relative;
-    width: 100vw;
-    display: flex;
-    padding: 1rem 2rem;
-    justify-content: space-between;
-  }
-  .svg-rocks-footer {
-    display: block;
-    position: relative;
-    bottom: 0%;
-    left: -10%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 100vw;
-    .rock-0 {
-      fill: $rock-0;
-    }
-    .rock-1 {
-      fill: $rock-1;
-    }
-    .rock-2 {
-      fill: $rock-2;
-    }
-  }
-}
+//   background: rgb(1, 1, 12);
+//   bottom: 0%;
+//   left: 0%;
+//   width: 100vw;
+//   height: 224px;
+//   overflow: hidden;
+//   .footer-content {
+//     outline: 1px solid black;
+//     position: relative;
+//     width: 100vw;
+//     display: flex;
+//     padding: 1rem 2rem;
+//     justify-content: space-between;
+//   }
+//   .svg-rocks-footer {
+//     display: block;
+//     position: relative;
+//     bottom: 0%;
+//     left: -10%;
+//     overflow-x: scroll;
+//     overflow-y: hidden;
+//     width: 100vw;
+//     .rock-0 {
+//       fill: $rock-0;
+//     }
+//     .rock-1 {
+//       fill: $rock-1;
+//     }
+//     .rock-2 {
+//       fill: $rock-2;
+//     }
+//   }
+// }
 
 .translateX20 {
   transform: translateX(10px);
 }
-
 .translateX-20 {
   transform: translateX(-8px);
 }

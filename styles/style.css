@@ -62,7 +62,7 @@ body {
   fill: hsl(220deg, 0%, 8%);
 }
 
-main.content-container {
+main {
   margin-top: 222px;
   overflow: hidden;
   width: 100vw;
@@ -70,73 +70,34 @@ main.content-container {
   background: hsl(220deg, 0%, 8%);
   position: absolute;
 }
-main.content-container nav ul {
+main nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
   gap: 3rem;
 }
-main.content-container nav ul .nav-link {
+main nav ul .nav-link {
   font-size: 2rem;
   color: hsl(0deg, 6%, 76%);
   border-bottom: 1px solid hsl(220deg, 0%, 4%);
   transition: ease-in-out 150ms;
 }
-main.content-container nav ul .nav-link:hover {
+main nav ul .nav-link:hover {
   color: hsl(0deg, 6%, 86%);
   border-bottom: 1px solid hsl(0deg, 6%, 16%);
 }
-main.content-container .content-1 {
+main .content-1 {
   background: hsl(220deg, 0%, 4%);
   width: 80vw;
   padding: 2rem;
   margin-top: 2rem;
 }
-main.content-container .content-1 p {
+main .content-1 p {
   color: white;
   font-size: 2rem;
 }
-main.content-container .content-1 :last-child {
+main .content-1 :last-child {
   text-align: right;
-}
-
-footer {
-  background: black;
-  position: absolute;
-  width: 100vw;
-  overflow: hidden;
-  background: rgb(1, 1, 12);
-  bottom: 0%;
-  left: 0%;
-  width: 100vw;
-  height: 224px;
-  overflow: hidden;
-}
-footer .footer-content {
-  outline: 1px solid black;
-  position: relative;
-  width: 100vw;
-  display: flex;
-  padding: 1rem 2rem;
-  justify-content: space-between;
-}
-footer .svg-rocks-footer {
-  display: block;
-  position: relative;
-  bottom: 0%;
-  left: -10%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 100vw;
-}
-footer .svg-rocks-footer .rock-0 {
-  fill: rgb(196, 199, 27);
-}
-footer .svg-rocks-footer .rock-1 {
-  fill: rgb(185, 21, 21);
-}
-footer .svg-rocks-footer .rock-2 {
-  fill: rgb(72, 111, 20);
 }
 
 .translateX20 {

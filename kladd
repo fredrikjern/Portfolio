@@ -27,3 +27,20 @@ navlinks.forEach((navlink) => {
         // .wave-9  {fill: #3c88cc;}
         // .wave-10  {fill: #438fd2;}
         // .wave-11  {fill: #4a97d7;}
+
+
+let increase = true;
+let deltaY = (2 * (highY - startY)) / frames;
+        // if (frame > frames / 2) {
+      //   increase = false;
+      // }
+      // y = increase ? y - deltaY : y + deltaY;
+
+      // Jag vill beskriva y som en funktion av x som vänder halvvägs
+      //och är parabolformad-- > ex. y = 50x - x^2,
+      //(x = -15 -> y= -20), (x=65 -> y=-40) (x = 115 -> y= -20)
+      // x går från -15 till 115 -> 130 i skillnad på 120 steg (beror på animationens längd)
+      // Förenkla? Gör positiv, gå från 20 till 40 till 20 och ändra till negativt vid implementering?
+      // Gör den relativt frames istället för x ?
+      // y = (frame-frame^2) + 20, där frame-frame^2 går från 0 till 20 till 0?
+      // f(x)=(120x-x^(2))*0.005 + 20  går från 20 till 40 till 20

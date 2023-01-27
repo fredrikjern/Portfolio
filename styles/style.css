@@ -74,7 +74,7 @@ main.content-container nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 5rem;
+  gap: 3rem;
 }
 main.content-container nav ul .nav-link {
   font-size: 2rem;

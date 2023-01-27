@@ -7,38 +7,27 @@ navlinks.forEach((navlink) => {
   navlink.addEventListener("click", (event) => {
     event.preventDefault();
     transitionGradient(
-      170,
-      300,
-      -25,
-      125,
-      20,
-      3000,
-      backgroundGradient,
-      waves
+      170,300,-25,125,20,3000,
+      backgroundGradient,waves
     );
   });
 });
 
 // Funktions
+
 function transitionGradient(
-  startAngle,
-  endAngle,
-  startX,
-  endX,
-  startY,
-  time,
-  obj,
-  waves
+  startAngle,endAngle,startX,endX,
+  startY,time,obj,waves
 ) {
   return new Promise((resolve, reject) => {
-    let frameRate = 1000 / 60; // 16.666666666666668, uppdateringsfrekens
-    let frames = Math.round(time / frameRate); //ger totala antalet frames under animationen? (avrundat)
-    let updatePerFrame = (endAngle - startAngle) / frames;
-    let deltaX = (endX - startX) / frames;
+    let frameRate = 1000 / 60; // 16.666666666666668 ms, uppdateringsfrekens
+    let frames = Math.round(time / frameRate); // ger totala antalet frames under animationen
+    let updatePerFrame = (endAngle - startAngle) / frames; // Anglechange per frame
+    let deltaX = (endX - startX) / frames; // x-change per frame
     let angle = startAngle;
     let x = startX;
     let frame = 0;
-    let y = (frames * frame - frame ** 2) * 0.006 + startY;
+    let y = (frames * frame - frame ** 2) * 0.006 + startY; // Parabolic equation to simulate sun-movement
 
     let intervalId = setInterval(function () {
       frame++;

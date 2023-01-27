@@ -8,7 +8,7 @@ navlinks.forEach((navlink) => {
     event.preventDefault();
     transitionGradient(
       170,
-      290,
+      300,
       -15,
       115,
       -20,
@@ -48,20 +48,31 @@ function transitionGradient(
       frame++;
       angle += updatePerFrame;
       x += deltaX;
-      if (frame > frames / 2) {
-        increase = false;
-      }
-      y = increase ? y - deltaY : y + deltaY;
+      // if (frame > frames / 2) {
+      //   increase = false;
+      // }
+      // y = increase ? y - deltaY : y + deltaY;
 
-      obj.style.backgroundImage = `conic-gradient(from ${angle}deg at ${x}% ${y}%, rgb(130, 160, 238) 76%, rgb(182, 202, 255) 87%, rgb(130, 160, 238) 100%)`;
+      // Jag vill beskriva y som en funktion av x som vänder halvvägs
+      //och är parabolformad-- > ex. y = 50x - x^2,
+      //(x = -15 -> y= -20), (x=65 -> y=-40) (x = 115 -> y= -20)
+      // x går från -15 till 115 -> 130 i skillnad på 120 steg (beror på animationens längd)
+      // Förenkla? Gör positiv, gå från 20 till 40 till 20 och ändra till negativt vid implementering?
+      // Gör den relativt frames istället för x ?
+      // y = (frame-frame^2) + 20, där frame-frame^2 går från 0 till 20 till 0?
+      // f(x)=(120x-x^(2))*0.005 + 20  går från 20 till 40 till 20
+
+      y = (frames * frame - frame ** 2) * 0.006 + 20;
+
+      obj.style.backgroundImage = `conic-gradient(from ${angle}deg at ${x}% -${y}%, rgb(130, 160, 238) 76%, rgb(182, 202, 255) 87%, rgb(130, 160, 238) 100%)`;
 
       if (frame % 20 == 0) {
         waves.forEach((element, index) => {
-            if (index % 2 === 0) {
-              element.classList.toggle("translateX20");
-            } else {
-                element.classList.toggle("translateX-20");
-            }
+          if (index % 2 === 0) {
+            element.classList.toggle("translateX20");
+          } else {
+            element.classList.toggle("translateX-20");
+          }
         });
       }
       if (angle >= endAngle) {

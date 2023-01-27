@@ -5,9 +5,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.move-button {
-  position: absolute;
-  top: 50%;
+body {
+  background: hsl(220deg, 0%, 8%);
 }
 
 .div-waves {
@@ -23,78 +22,82 @@
   overflow-x: scroll;
   overflow-y: hidden;
 }
-.div-waves .header-waves .wave-0 {
-  fill: hsl(220deg, 70%, 24%);
+.div-waves .header-waves :nth-child(0) {
+  fill: hsl(220deg, 70%, 31%);
 }
-.div-waves .header-waves .wave-1 {
-  fill: hsl(220deg, 70%, 27%);
+.div-waves .header-waves :nth-child(1) {
+  fill: hsl(220deg, 70%, 34%);
 }
-.div-waves .header-waves .wave-2 {
-  fill: hsl(220deg, 70%, 30%);
+.div-waves .header-waves :nth-child(2) {
+  fill: hsl(220deg, 70%, 37%);
 }
-.div-waves .header-waves .wave-3 {
-  fill: hsl(220deg, 70%, 33%);
+.div-waves .header-waves :nth-child(3) {
+  fill: hsl(220deg, 70%, 40%);
 }
-.div-waves .header-waves .wave-4 {
-  fill: hsl(220deg, 70%, 36%);
+.div-waves .header-waves :nth-child(4) {
+  fill: hsl(220deg, 70%, 43%);
 }
-.div-waves .header-waves .wave-5 {
-  fill: hsl(220deg, 70%, 39%);
+.div-waves .header-waves :nth-child(5) {
+  fill: hsl(220deg, 70%, 46%);
 }
-.div-waves .header-waves .wave-6 {
-  fill: hsl(220deg, 70%, 42%);
+.div-waves .header-waves :nth-child(6) {
+  fill: hsl(220deg, 70%, 49%);
 }
-.div-waves .header-waves .wave-7 {
-  fill: hsl(220deg, 70%, 45%);
+.div-waves .header-waves :nth-child(7) {
+  fill: hsl(220deg, 70%, 52%);
 }
-.div-waves .header-waves .wave-8 {
-  fill: hsl(220deg, 70%, 48%);
+.div-waves .header-waves :nth-child(8) {
+  fill: hsl(220deg, 70%, 55%);
 }
-.div-waves .header-waves .wave-9 {
-  fill: hsl(220deg, 70%, 51%);
+.div-waves .header-waves :nth-child(9) {
+  fill: hsl(220deg, 70%, 58%);
 }
-.div-waves .header-waves .wave-10 {
-  fill: hsl(220deg, 70%, 54%);
+.div-waves .header-waves :nth-child(10) {
+  fill: hsl(220deg, 70%, 61%);
+}
+.div-waves .header-waves :nth-child(11) {
+  fill: hsl(220deg, 70%, 64%);
 }
 .div-waves .header-waves .wave-11 {
   fill: hsl(220deg, 0%, 8%);
 }
 
-.content-container {
+main.content-container {
   margin-top: 224px;
   overflow: hidden;
   width: 100vw;
-  height: auto;
+  height: 100%;
   background: hsl(220deg, 0%, 8%);
   position: absolute;
 }
-.content-container nav ul {
+main.content-container nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
   gap: 3rem;
-  font-size: 2rem;
 }
-.content-container nav ul .nav-link {
+main.content-container nav ul .nav-link {
+  font-size: 2rem;
   color: hsl(0deg, 6%, 76%);
   border-bottom: 1px solid hsl(220deg, 0%, 4%);
   transition: ease-in-out 150ms;
 }
-.content-container nav ul .nav-link:hover {
+main.content-container nav ul .nav-link:hover {
   color: hsl(0deg, 6%, 86%);
   border-bottom: 1px solid hsl(0deg, 6%, 16%);
 }
-.content-container .content-1 {
+main.content-container .content-1 {
   background: hsl(220deg, 0%, 4%);
   width: 80vw;
+  outline: 1px solid red;
   padding: 2rem;
   margin-top: 2rem;
 }
-.content-container .content-1 p {
+main.content-container .content-1 p {
   color: white;
   font-size: 2rem;
 }
-.content-container .content-1 :last-child {
+main.content-container .content-1 :last-child {
   text-align: right;
 }
 
@@ -137,6 +140,10 @@ footer .svg-rocks-footer .rock-2 {
   fill: rgb(72, 111, 20);
 }
 
-.translateX-20 {
+.translateX20 {
   transform: translateX(10px);
+}
+
+.translateX-20 {
+  transform: translateX(-8px);
 }/*# sourceMappingURL=style.css.map */

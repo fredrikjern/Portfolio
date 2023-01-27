@@ -1,4 +1,29 @@
     let updatePerFrame = getDelta(endAngle,startAngle,frames);
     let deltaX = getDelta(endX,startX,frames);
     let deltaY = getDelta(highY,startY,frames)*2;
-    let deltaShadow = getDelta(bsEnd,bsStart,frames)
+let deltaShadow = getDelta(bsEnd, bsStart, frames)
+    
+navlinks.forEach((navlink) => {
+  navlink.addEventListener("click", (event) => {
+    event.preventDefault();
+    waves.forEach((element, index) => {
+      if (index % 2 === 0) {
+        console.log("hej");
+        element.classList.toggle("translateX-20");
+      }
+    });
+  });
+});
+
+   // .wave-0  {fill: #134498;}
+        // .wave-1  {fill: #154b9e;}
+        // .wave-2  {fill: #1853a4;}
+        // .wave-3  {fill: #1b5aaa;}
+        // .wave-4  {fill: #2062b0;}
+        // .wave-5  {fill: #2469b6;}
+        // .wave-6  {fill: #2a71bc;}
+        // .wave-7  {fill: #2f78c1;}
+        // .wave-8  {fill: #3680c7;}
+        // .wave-9  {fill: #3c88cc;}
+        // .wave-10  {fill: #438fd2;}
+        // .wave-11  {fill: #4a97d7;}

@@ -26,10 +26,8 @@ $rock-2: rgb(72, 111, 20);
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.move-button {
-    position: absolute;
-    top: 50%;
+body{
+    background: $dark;
 }
 .div-waves {
     background: conic-gradient(from 164deg at -15% -15%, rgba(130, 160, 238, 1) 76%, rgba(182, 202, 255, 1) 87%, rgba(130, 160, 238, 1) 100%);
@@ -42,52 +40,41 @@ $rock-2: rgb(72, 111, 20);
         left: -10%;
         overflow-x: scroll;
         overflow-y: hidden;
-    
-        .wave-0  {fill: $gradient-0;}
-        .wave-1  {fill: $gradient-1;}
-        .wave-2  {fill: $gradient-2;}
-        .wave-3  {fill: $gradient-3;}
-        .wave-4  {fill: $gradient-4;}
-        .wave-5  {fill: $gradient-5;}
-        .wave-6  {fill: $gradient-6;}
-        .wave-7  {fill: $gradient-7;}
-        .wave-8  {fill: $gradient-8;}
-        .wave-9  {fill: $gradient-9;}
-        .wave-10  {fill: $gradient-10;}
+        @for $i from 0 through 11 {
+        :nth-child(#{$i}) {
+            fill: hsl(220, 70%, (31%+3*$i))
+            }
+        }
+        // .wave-0  {fill: $gradient-0;}
+        // .wave-1  {fill: $gradient-1;}
+        // .wave-2  {fill: $gradient-2;}
+        // .wave-3  {fill: $gradient-3;}
+        // .wave-4  {fill: $gradient-4;}
+        // .wave-5  {fill: $gradient-5;}
+        // .wave-6  {fill: $gradient-6;}
+        // .wave-7  {fill: $gradient-7;}
+        // .wave-8  {fill: $gradient-8;}
+        // .wave-9  {fill: $gradient-9;}
+        // .wave-10  {fill: $gradient-10;}
         .wave-11  {fill: $dark}
-        // .wave-0  {fill: #134498;}
-        // .wave-1  {fill: #154b9e;}
-        // .wave-2  {fill: #1853a4;}
-        // .wave-3  {fill: #1b5aaa;}
-        // .wave-4  {fill: #2062b0;}
-        // .wave-5  {fill: #2469b6;}
-        // .wave-6  {fill: #2a71bc;}
-        // .wave-7  {fill: #2f78c1;}
-        // .wave-8  {fill: #3680c7;}
-        // .wave-9  {fill: #3c88cc;}
-        // .wave-10  {fill: #438fd2;}
-        // .wave-11  {fill: #4a97d7;}
     }
 }
-
-
-.content-container {   
+main.content-container {   
     margin-top: 224px;
     overflow: hidden;
     width: 100vw;
-    height: auto;
+    height: 100%;
     background: $dark;
     position: absolute;
-   
     nav {
         ul {
             display: flex;
             justify-content: center;
             list-style: none;
             gap: 3rem;
-            font-size: 2rem;
 
             .nav-link {
+                font-size: 2rem;
                 color: hsl(0, 6%, 76%);
                  border-bottom: 1px solid $dark-gray;
                  transition: ease-in-out 150ms;
@@ -102,12 +89,12 @@ $rock-2: rgb(72, 111, 20);
     .content-1 {
         background: $dark-gray;
         width: 80vw;
+        outline: 1px solid red;
         padding: 2rem;
         margin-top: 2rem;
         p {
             color: white;
             font-size: 2rem;
-            
         }
         :last-child {
                 text-align: right;
@@ -150,6 +137,14 @@ footer {
     }
 }
 
-.translateX-20 {
+
+
+
+
+.translateX20 {
     transform: translateX(10px);
+}
+
+.translateX-20 {
+    transform: translateX(-8px);
 }

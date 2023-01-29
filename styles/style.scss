@@ -4,48 +4,61 @@ $dark-gray: hsl(220, 0%, 4%);
 $light-gray: hsl(220, 0%, 15%);
 
 * {
+  
   margin: 0px;
   padding: 0px;
   font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1280 - 320)));
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
+  height: 100%;
   background: $dark;
 }
-.div-waves {
-  background: conic-gradient(
+header {
+  background: $dark;
+  overflow-x: hidden;
+  width: 100vw;
+  .svg-container {
+  transform: translateY(2px);
+
+    width: 100vw;
+    background: conic-gradient(
     from 164deg at -15% -15%,
     rgba(130, 160, 238, 1) 76%,
     rgba(182, 202, 255, 1) 87%,
     rgba(130, 160, 238, 1) 100%
   );
-  position: absolute;
-  width: 100vw;
-  overflow: hidden;
-  .header-waves {
-    position: relative;
-    top: 0%;
-    left: -10%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    @for $i from 0 through 11 {
+  svg {
+    display: block;
+    //outline: 1px solid red;
+    width: 110vw;
+    transform: translateX(-30px);
+    @for $i from 0 through 9 {
       :nth-child(#{$i}) {
         fill: hsl(220, 70%, (31%+3 * $i));
       }
+    }
+    .wave-9 {
+      fill: $light-gray;
+    }
+    .wave-10 {
+      fill: $dark-gray;
     }
     .wave-11 {
       fill: $dark;
     }
   }
 }
+}
 main {
-  margin-top: 222px;
+  outline: 1px solid red;
+
   overflow: hidden;
   width: 100vw;
   height: 100%;
   background: $dark;
-  position: absolute;
   nav {
+    margin-top: 1rem;
     ul {
       display: flex;
       justify-content: center;
@@ -64,8 +77,10 @@ main {
     }
   }
   .content-1 {
+    margin: auto;
     background: $dark-gray;
     width: 80vw;
+    height: 100%;
     //outline: 1px solid red;
     padding: 2rem;
     margin-top: 2rem;
@@ -78,6 +93,31 @@ main {
     }
   }
 }
+
+footer {
+  position: relative;
+  bottom: 0%;
+  background: $dark;
+  overflow: hidden;
+  width: 100vw;
+  outline: 1px solid green;
+  
+  svg {
+    display: block;
+    outline: 1px solid red;
+    width: 100vw;
+    .rock-0 {
+      fill: $light-gray;
+    }
+    .rock-1 {
+      fill: $dark-gray;
+    }
+    .rock-2 {
+      fill: $dark;
+    }
+  }
+}
+
 // footer {
 //   background: black;
 //   position: absolute;

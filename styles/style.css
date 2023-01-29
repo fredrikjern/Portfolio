@@ -6,69 +6,74 @@
 }
 
 body {
+  height: 100%;
   background: hsl(220deg, 0%, 8%);
 }
 
-.div-waves {
-  background: conic-gradient(from 164deg at -15% -15%, rgb(130, 160, 238) 76%, rgb(182, 202, 255) 87%, rgb(130, 160, 238) 100%);
-  position: absolute;
+header {
+  background: hsl(220deg, 0%, 8%);
+  overflow-x: hidden;
   width: 100vw;
-  overflow: hidden;
 }
-.div-waves .header-waves {
-  position: relative;
-  top: 0%;
-  left: -10%;
-  overflow-x: scroll;
-  overflow-y: hidden;
+header .svg-container {
+  transform: translateY(2px);
+  width: 100vw;
+  background: conic-gradient(from 164deg at -15% -15%, rgb(130, 160, 238) 76%, rgb(182, 202, 255) 87%, rgb(130, 160, 238) 100%);
 }
-.div-waves .header-waves :nth-child(0) {
+header .svg-container svg {
+  display: block;
+  width: 110vw;
+  transform: translateX(-30px);
+}
+header .svg-container svg :nth-child(0) {
   fill: hsl(220deg, 70%, 31%);
 }
-.div-waves .header-waves :nth-child(1) {
+header .svg-container svg :nth-child(1) {
   fill: hsl(220deg, 70%, 34%);
 }
-.div-waves .header-waves :nth-child(2) {
+header .svg-container svg :nth-child(2) {
   fill: hsl(220deg, 70%, 37%);
 }
-.div-waves .header-waves :nth-child(3) {
+header .svg-container svg :nth-child(3) {
   fill: hsl(220deg, 70%, 40%);
 }
-.div-waves .header-waves :nth-child(4) {
+header .svg-container svg :nth-child(4) {
   fill: hsl(220deg, 70%, 43%);
 }
-.div-waves .header-waves :nth-child(5) {
+header .svg-container svg :nth-child(5) {
   fill: hsl(220deg, 70%, 46%);
 }
-.div-waves .header-waves :nth-child(6) {
+header .svg-container svg :nth-child(6) {
   fill: hsl(220deg, 70%, 49%);
 }
-.div-waves .header-waves :nth-child(7) {
+header .svg-container svg :nth-child(7) {
   fill: hsl(220deg, 70%, 52%);
 }
-.div-waves .header-waves :nth-child(8) {
+header .svg-container svg :nth-child(8) {
   fill: hsl(220deg, 70%, 55%);
 }
-.div-waves .header-waves :nth-child(9) {
+header .svg-container svg :nth-child(9) {
   fill: hsl(220deg, 70%, 58%);
 }
-.div-waves .header-waves :nth-child(10) {
-  fill: hsl(220deg, 70%, 61%);
+header .svg-container svg .wave-9 {
+  fill: hsl(220deg, 0%, 15%);
 }
-.div-waves .header-waves :nth-child(11) {
-  fill: hsl(220deg, 70%, 64%);
+header .svg-container svg .wave-10 {
+  fill: hsl(220deg, 0%, 4%);
 }
-.div-waves .header-waves .wave-11 {
+header .svg-container svg .wave-11 {
   fill: hsl(220deg, 0%, 8%);
 }
 
 main {
-  margin-top: 222px;
+  outline: 1px solid red;
   overflow: hidden;
   width: 100vw;
   height: 100%;
   background: hsl(220deg, 0%, 8%);
-  position: absolute;
+}
+main nav {
+  margin-top: 1rem;
 }
 main nav ul {
   display: flex;
@@ -87,8 +92,10 @@ main nav ul .nav-link:hover {
   border-bottom: 1px solid hsl(0deg, 6%, 16%);
 }
 main .content-1 {
+  margin: auto;
   background: hsl(220deg, 0%, 4%);
   width: 80vw;
+  height: 100%;
   padding: 2rem;
   margin-top: 2rem;
 }
@@ -98,6 +105,29 @@ main .content-1 p {
 }
 main .content-1 :last-child {
   text-align: right;
+}
+
+footer {
+  position: relative;
+  bottom: 0%;
+  background: hsl(220deg, 0%, 8%);
+  overflow: hidden;
+  width: 100vw;
+  outline: 1px solid green;
+}
+footer svg {
+  display: block;
+  outline: 1px solid red;
+  width: 100vw;
+}
+footer svg .rock-0 {
+  fill: hsl(220deg, 0%, 15%);
+}
+footer svg .rock-1 {
+  fill: hsl(220deg, 0%, 4%);
+}
+footer svg .rock-2 {
+  fill: hsl(220deg, 0%, 8%);
 }
 
 .translateX20 {

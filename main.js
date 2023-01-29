@@ -1,7 +1,7 @@
 let moveButton = document.querySelector(".move-button");
 //let wave_0 = document.querySelector(".wave-0");
 let waves = document.querySelectorAll(".wave");
-let backgroundGradient = document.querySelector(".div-waves");
+let backgroundGradient = document.querySelector(".svg-container");
 let navlinks = document.querySelectorAll(".nav-link");
 navlinks.forEach((navlink) => {
   navlink.addEventListener("click", (event) => {
@@ -39,7 +39,12 @@ function transitionGradient(
 
       if (frame % 20 == 0) {
         waves.forEach((element, index) => {
-          if (index===waves.length-1) return
+          if (
+            index === waves.length - 1 ||
+            index === waves.length - 2 ||
+            index === waves.length - 3
+          )
+            return;
           if (index % 2 === 0) {
             element.classList.toggle("translateX20");
           } else {

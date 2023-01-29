@@ -1,0 +1,19 @@
+if (endAngle - startAngle > 100) {
+      frame = 0
+    } else if (endAngle - startAngle < 100 && endAngle - startAngle > 0) {
+
+    } else if () { 
+
+    }
+    300-167 start to end
+    133
+    235-167 start to mid
+    68
+    167-235  mid to start
+      - 68
+    300-235 mid to end
+    65
+    235-300 end to mid
+      - 65
+    167-300 end to start
+    -133

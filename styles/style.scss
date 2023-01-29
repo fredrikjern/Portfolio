@@ -4,7 +4,6 @@ $dark-gray: hsl(220, 0%, 4%);
 $light-gray: hsl(220, 0%, 15%);
 
 * {
-  
   margin: 0px;
   padding: 0px;
   font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1280 - 320)));
@@ -19,41 +18,43 @@ header {
   overflow-x: hidden;
   width: 100vw;
   .svg-container {
-  transform: translateY(2px);
-
     width: 100vw;
     background: conic-gradient(
-    from 164deg at -15% -15%,
-    rgba(130, 160, 238, 1) 76%,
-    rgba(182, 202, 255, 1) 87%,
-    rgba(130, 160, 238, 1) 100%
-  );
-  svg {
-    display: block;
-    //outline: 1px solid red;
-    width: 110vw;
-    transform: translateX(-30px);
-    @for $i from 0 through 9 {
-      :nth-child(#{$i}) {
-        fill: hsl(220, 70%, (31%+3 * $i));
+      from 164deg at -15% -15%,
+      rgba(130, 160, 238, 1) 76%,
+      rgba(182, 202, 255, 1) 87%,
+      rgba(130, 160, 238, 1) 100%
+    );
+    svg {
+      display: block;
+      //outline: 1px solid red;
+      width: 110vw;
+      transform: translate(-30px, 2px);
+      @for $i from 0 through 9 {
+        :nth-child(#{$i}) {
+          fill: hsl(220, 70%, (31%+3 * $i));
+          &:hover {
+            transition: ease-in-out 200ms;
+            transform: translateY(-2px);
+          }
+        }
       }
-    }
-    .wave-9 {
-      fill: $light-gray;
-    }
-    .wave-10 {
-      fill: $dark-gray;
-    }
-    .wave-11 {
-      fill: $dark;
+      .wave-9 {
+        fill: $light-gray;
+      }
+      .wave-10 {
+        fill: $dark-gray;
+      }
+      .wave-11 {
+        fill: $dark;
+      }
     }
   }
 }
-}
 main {
-  outline: 1px solid red;
-
-  overflow: hidden;
+  //outline: 1px solid red;
+  //transform: translateY(-4px);
+  //overflow: hidden;
   width: 100vw;
   height: 100%;
   background: $dark;
@@ -76,91 +77,92 @@ main {
       }
     }
   }
-  .content-1 {
+
+  .flex-container {
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
     background: $dark-gray;
     width: 80vw;
     height: 100%;
     //outline: 1px solid red;
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    transition: ease-in-out 100ms;
     p {
       color: white;
-      font-size: 2rem;
+      font-size: 1rem;
     }
     :last-child {
       text-align: right;
+    }
+    div {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-start;
+
+      background-color: $light-gray;
+      color: aliceblue;
+      border: 1px solid $dark-gray;
+      height: 120px;
+      width: 150px;
+      padding: 4px;
+      transition: ease-in-out 200ms;
+      &.gallery-card {
+        justify-content: flex-end;
+
+        &:hover {
+          opacity: 60%;
+        }
+      }
+    }
+    &.hidden {
+      transition: 100ms;
+      opacity: 50%;
     }
   }
 }
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0%;
   background: $dark;
   overflow: hidden;
   width: 100vw;
-  outline: 1px solid green;
-  
+  //outline: 1px solid green;
+  .email {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+  }
+  .linkbook {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+  }
   svg {
     display: block;
-    outline: 1px solid red;
+    //outline: 1px solid red;
     width: 100vw;
-    .rock-0 {
-      fill: $light-gray;
-    }
-    .rock-1 {
-      fill: $dark-gray;
-    }
-    .rock-2 {
-      fill: $dark;
+    @for $i from 1 through 3 {
+      :nth-child(#{$i}) {
+        fill: hsl(220, 0%, 15%-2 * $i);
+        &:hover {
+          transition: ease-in-out 200ms;
+          transform: translateY(-4px);
+        }
+      }
     }
   }
 }
 
-// footer {
-//   background: black;
-//   position: absolute;
-//   width: 100vw;
-//   overflow: hidden;
-
-//   background: rgb(1, 1, 12);
-//   bottom: 0%;
-//   left: 0%;
-//   width: 100vw;
-//   height: 224px;
-//   overflow: hidden;
-//   .footer-content {
-//     outline: 1px solid black;
-//     position: relative;
-//     width: 100vw;
-//     display: flex;
-//     padding: 1rem 2rem;
-//     justify-content: space-between;
-//   }
-//   .svg-rocks-footer {
-//     display: block;
-//     position: relative;
-//     bottom: 0%;
-//     left: -10%;
-//     overflow-x: scroll;
-//     overflow-y: hidden;
-//     width: 100vw;
-//     .rock-0 {
-//       fill: $rock-0;
-//     }
-//     .rock-1 {
-//       fill: $rock-1;
-//     }
-//     .rock-2 {
-//       fill: $rock-2;
-//     }
-//   }
-// }
-
 .translateX20 {
+  transition: ease-out 100ms;
   transform: translateX(10px);
 }
 .translateX-20 {
+  transition: ease-in 100ms;
   transform: translateX(-8px);
 }

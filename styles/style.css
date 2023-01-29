@@ -16,44 +16,83 @@ header {
   width: 100vw;
 }
 header .svg-container {
-  transform: translateY(2px);
   width: 100vw;
   background: conic-gradient(from 164deg at -15% -15%, rgb(130, 160, 238) 76%, rgb(182, 202, 255) 87%, rgb(130, 160, 238) 100%);
 }
 header .svg-container svg {
   display: block;
   width: 110vw;
-  transform: translateX(-30px);
+  transform: translate(-30px, 2px);
 }
 header .svg-container svg :nth-child(0) {
   fill: hsl(220deg, 70%, 31%);
 }
+header .svg-container svg :nth-child(0):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
+}
 header .svg-container svg :nth-child(1) {
   fill: hsl(220deg, 70%, 34%);
+}
+header .svg-container svg :nth-child(1):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
 }
 header .svg-container svg :nth-child(2) {
   fill: hsl(220deg, 70%, 37%);
 }
+header .svg-container svg :nth-child(2):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
+}
 header .svg-container svg :nth-child(3) {
   fill: hsl(220deg, 70%, 40%);
+}
+header .svg-container svg :nth-child(3):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
 }
 header .svg-container svg :nth-child(4) {
   fill: hsl(220deg, 70%, 43%);
 }
+header .svg-container svg :nth-child(4):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
+}
 header .svg-container svg :nth-child(5) {
   fill: hsl(220deg, 70%, 46%);
+}
+header .svg-container svg :nth-child(5):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
 }
 header .svg-container svg :nth-child(6) {
   fill: hsl(220deg, 70%, 49%);
 }
+header .svg-container svg :nth-child(6):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
+}
 header .svg-container svg :nth-child(7) {
   fill: hsl(220deg, 70%, 52%);
+}
+header .svg-container svg :nth-child(7):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
 }
 header .svg-container svg :nth-child(8) {
   fill: hsl(220deg, 70%, 55%);
 }
+header .svg-container svg :nth-child(8):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
+}
 header .svg-container svg :nth-child(9) {
   fill: hsl(220deg, 70%, 58%);
+}
+header .svg-container svg :nth-child(9):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-2px);
 }
 header .svg-container svg .wave-9 {
   fill: hsl(220deg, 0%, 15%);
@@ -66,8 +105,6 @@ header .svg-container svg .wave-11 {
 }
 
 main {
-  outline: 1px solid red;
-  overflow: hidden;
   width: 100vw;
   height: 100%;
   background: hsl(220deg, 0%, 8%);
@@ -91,49 +128,98 @@ main nav ul .nav-link:hover {
   color: hsl(0deg, 6%, 86%);
   border-bottom: 1px solid hsl(0deg, 6%, 16%);
 }
-main .content-1 {
+main .flex-container {
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
   background: hsl(220deg, 0%, 4%);
   width: 80vw;
   height: 100%;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  transition: ease-in-out 100ms;
 }
-main .content-1 p {
+main .flex-container p {
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
 }
-main .content-1 :last-child {
+main .flex-container :last-child {
   text-align: right;
+}
+main .flex-container div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  background-color: hsl(220deg, 0%, 15%);
+  color: aliceblue;
+  border: 1px solid hsl(220deg, 0%, 4%);
+  height: 120px;
+  width: 150px;
+  padding: 4px;
+  transition: ease-in-out 200ms;
+}
+main .flex-container div.gallery-card {
+  justify-content: flex-end;
+}
+main .flex-container div.gallery-card:hover {
+  opacity: 60%;
+}
+main .flex-container.hidden {
+  transition: 100ms;
+  opacity: 50%;
 }
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0%;
   background: hsl(220deg, 0%, 8%);
   overflow: hidden;
   width: 100vw;
-  outline: 1px solid green;
+}
+footer .email {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+}
+footer .linkbook {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
 }
 footer svg {
   display: block;
-  outline: 1px solid red;
   width: 100vw;
 }
-footer svg .rock-0 {
-  fill: hsl(220deg, 0%, 15%);
+footer svg :nth-child(1) {
+  fill: hsl(220deg, 0%, 13%);
 }
-footer svg .rock-1 {
-  fill: hsl(220deg, 0%, 4%);
+footer svg :nth-child(1):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-4px);
 }
-footer svg .rock-2 {
-  fill: hsl(220deg, 0%, 8%);
+footer svg :nth-child(2) {
+  fill: hsl(220deg, 0%, 11%);
+}
+footer svg :nth-child(2):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-4px);
+}
+footer svg :nth-child(3) {
+  fill: hsl(220deg, 0%, 9%);
+}
+footer svg :nth-child(3):hover {
+  transition: ease-in-out 200ms;
+  transform: translateY(-4px);
 }
 
 .translateX20 {
+  transition: ease-out 100ms;
   transform: translateX(10px);
 }
 
 .translateX-20 {
+  transition: ease-in 100ms;
   transform: translateX(-8px);
 }/*# sourceMappingURL=style.css.map */

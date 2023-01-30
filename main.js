@@ -54,7 +54,7 @@ function transitionGradient(
       }
 
       obj.style.backgroundImage = `conic-gradient(from ${angle}deg at ${x}% -${y}%, rgb(130, 160, 238) 76%, rgb(182, 202, 255) 87%, rgb(130, 160, 238) 100%)`;
-      
+
       if (frame % 20 == 0) {
         waves.forEach((element, index) => {
           if (
@@ -70,30 +70,7 @@ function transitionGradient(
           }
         });
       }
-      
-      /*
-      //console.log("x:  " + x + "    y:  " + y + "   angle:  " + angle);
-      // waves.forEach((wave, index) => {
-      //   if (
-      //     // rör inte dom sista 3 vågorna
-      //     index === waves.length - 1 ||
-      //     index === waves.length - 2 ||
-      //     index === waves.length - 3
-      //   ) {
-      //     console.log("sista3");
-      //   } else {
-      //     if (index % 2 === 0 && frame % 40 === 0) {
-      //       console.log("if freame%   " + frame);
-      //       wave.classList.toggle("translateX-20");
-      //     } else if (index % 3 === 0 && frame % 30 === 0) {
-      //       wave.classList.toggle("translateX20");
-      //     }
-      //     //wave.style.transform = `translateX(${frame+index}px);`;
-      //     //wave.style.fill = `hsl(200, ${frame + index}%, ${31 + 3 * index}%)`;
-      //   }
-      // });
-      // console.log(frame + "  " + frames);
-      */
+
       if (frame === frames) {
         clearInterval(intervalId);
         resolve();
@@ -101,13 +78,12 @@ function transitionGradient(
     }, frameRate);
   });
 }
+// Logik för vilken animation som ska köras utfrån vilken sida man befinner sig på,
+//eventlisteners läggs på efter att animationen slutförts för att undvika att flera animationer körs samtidigt.
 function runAnimations(pageindex, index) {
-  //console.log(
-  //"pageindex: " + pageindex + "  index: " + index + "  INNE I RUNANIMATIONS"
-  //);
   if (pageindex === 0) {
     if (index === 0) {
-      //console.log(" 0 0 ");
+      console.log(" 0 0 ");
     }
     if (index === 1) {
       transitionGradient(
@@ -123,7 +99,7 @@ function runAnimations(pageindex, index) {
       ).then(function () {
         addListeners();
       });
-      //console.log("från home till gallery");
+      console.log("från home till gallery");
     } else if (index === 2) {
       transitionGradient(
         170,
@@ -156,7 +132,8 @@ function runAnimations(pageindex, index) {
       });
       //console.log("gallery to nhome");
     } else if (index === 1) {
-      //console.log(" 1 1 ");
+      console.log(" 1 1 ");
+      //addListeners();
     } else if (index === 2) {
       transitionGradient(
         225,
@@ -203,7 +180,7 @@ function runAnimations(pageindex, index) {
         addListeners();
       });
     } else if (index === 2) {
-      //console.log(" 2 2 ");
+      console.log(" 2 2 ");
     }
   }
 }
@@ -220,7 +197,7 @@ function buildHome() {
   flexContainer.innerHTML = "";
   flexContainer.innerHTML = `<p>Hi, I'm Fredrik Home</p>
             <p>I'm a FrontEnd Developer</p>`;
-  flexContainer.classList.remove("hidden")
+  flexContainer.classList.remove("hidden");
 }
 function buildGallery() {
   flexContainer.innerHTML = "";
@@ -235,42 +212,45 @@ function buildAbout() {
   flexContainer.innerHTML = `<div><p>Hi, I'm About</p></div>
             <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa similique unde labore soluta consequuntur.</p></div>`;
   flexContainer.classList.remove("hidden");
-
 }
 function addListeners() {
-  console.log("add events");
+  console.log("add events   pageindex= " + pageindex);
   let navlinks = document.querySelectorAll(".nav-link");
   navlinks.forEach((navlink, index) => {
-    navlink.addEventListener("click", (event) => {
-      event.preventDefault();
-      console.log("klick");
-      if (index === 0) {
+    if (index === 0 && pageindex !== index) {
+      navlink.addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log("klick");
         console.log("home");
-        flexContainer.classList.add("hidden")
+        flexContainer.classList.add("hidden"); //Funksr ej
         buildNav();
         buildHome();
         runAnimations(pageindex, index);
-      } else if (index === 1) {
+        pageindex = 0;
+      });
+    } else if (index === 1 && pageindex !== index) {
+      navlink.addEventListener("click", (event) => {
+        event.preventDefault();
         console.log("gallery");
         flexContainer.classList.add("hidden");
         buildNav();
         buildGallery();
         runAnimations(pageindex, index);
-      } else if (index === 2) {
+        pageindex = 1;
+        console.log("new pageindex:  " + pageindex);
+      });
+    } else if (index === 2 && pageindex !== index) {
+      navlink.addEventListener("click", (event) => {
+        event.preventDefault();
         console.log("about");
         flexContainer.classList.add("hidden");
         buildNav();
         buildAbout();
         runAnimations(pageindex, index);
-      }
-      console.log(
-        "pageindex: " +
-          pageindex +
-          "index: " +
-          index +
-          "    eventlister run runanimations"
-      );
-      pageindex = index;
-    });
+        pageindex = 2;
+      });
+    } else {
+      console.log("else??   "+pageindex + "   index:" + index);
+    }
   });
 }

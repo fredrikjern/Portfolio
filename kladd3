@@ -17,3 +17,29 @@ if (endAngle - startAngle > 100) {
       - 65
     167-300 end to start
     -133
+
+
+          
+      /*
+      //console.log("x:  " + x + "    y:  " + y + "   angle:  " + angle);
+      // waves.forEach((wave, index) => {
+      //   if (
+      //     // rör inte dom sista 3 vågorna
+      //     index === waves.length - 1 ||
+      //     index === waves.length - 2 ||
+      //     index === waves.length - 3
+      //   ) {
+      //     console.log("sista3");
+      //   } else {
+      //     if (index % 2 === 0 && frame % 40 === 0) {
+      //       console.log("if freame%   " + frame);
+      //       wave.classList.toggle("translateX-20");
+      //     } else if (index % 3 === 0 && frame % 30 === 0) {
+      //       wave.classList.toggle("translateX20");
+      //     }
+      //     //wave.style.transform = `translateX(${frame+index}px);`;
+      //     //wave.style.fill = `hsl(200, ${frame + index}%, ${31 + 3 * index}%)`;
+      //   }
+      // });
+      // console.log(frame + "  " + frames);
+      */

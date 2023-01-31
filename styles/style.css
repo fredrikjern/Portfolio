@@ -9,11 +9,18 @@ body {
   height: 100%;
   background: hsl(220deg, 0%, 8%);
 }
+body .grid-container {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  border: 1px solid green;
+}
 
 header {
   background: hsl(220deg, 0%, 8%);
   overflow-x: hidden;
   width: 100vw;
+  outline: 1px solid rgb(234, 0, 255);
 }
 header .svg-container {
   width: 100vw;
@@ -105,11 +112,15 @@ header .svg-container svg .wave-11 {
 }
 
 main {
+  outline: 1px solid red;
   width: 100vw;
+  min-height: 40vh;
+  min-height: 40dvh;
   height: 100%;
   background: hsl(220deg, 0%, 8%);
 }
 main nav {
+  outline: 1px solid greenyellow;
   margin-top: 1rem;
 }
 main nav ul {
@@ -121,6 +132,7 @@ main nav ul {
 main nav ul .nav-link {
   font-size: 2rem;
   color: hsl(0deg, 6%, 76%);
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid hsl(220deg, 0%, 4%);
   transition: ease-in-out 150ms;
 }
@@ -129,6 +141,7 @@ main nav ul .nav-link:hover {
   border-bottom: 1px solid hsl(0deg, 6%, 16%);
 }
 main .flex-container {
+  outline: 1px solid greenyellow;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -136,7 +149,6 @@ main .flex-container {
   gap: 1rem;
   background: hsl(220deg, 0%, 4%);
   width: 80vw;
-  height: 100%;
   padding: 2rem;
   margin-top: 1rem;
   transition: ease-in-out 100ms;
@@ -172,21 +184,27 @@ main .flex-container.hidden {
 }
 
 footer {
-  position: absolute;
-  bottom: 0%;
   background: hsl(220deg, 0%, 8%);
   overflow: hidden;
   width: 100vw;
+  outline: 1px solid yellow;
 }
-footer .email {
+footer .footer-nav {
+  outline: 1px solid green;
   position: absolute;
-  bottom: 1%;
-  left: 1%;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96vw;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
 }
-footer .linkbook {
-  position: absolute;
-  bottom: 1%;
-  right: 1%;
+footer .footer-nav svg {
+  width: 2rem;
+}
+footer .footer-nav svg .icon {
+  fill: aliceblue;
 }
 footer svg {
   display: block;

@@ -12,11 +12,21 @@ $light-gray: hsl(220, 0%, 15%);
 body {
   height: 100%;
   background: $dark;
+  .grid-container {
+    display: grid;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+
+    border: 1px solid green;
+  }
 }
 header {
   background: $dark;
   overflow-x: hidden;
   width: 100vw;
+  outline: 1px solid rgb(234, 0, 255);
+
   .svg-container {
     width: 100vw;
     background: conic-gradient(
@@ -52,13 +62,17 @@ header {
   }
 }
 main {
-  //outline: 1px solid red;
+  outline: 1px solid red;
   //transform: translateY(-4px);
   //overflow: hidden;
   width: 100vw;
+  min-height: 40vh;
+  min-height: 40dvh;
   height: 100%;
   background: $dark;
+
   nav {
+    outline: 1px solid greenyellow;
     margin-top: 1rem;
     ul {
       display: flex;
@@ -68,6 +82,7 @@ main {
       .nav-link {
         font-size: 2rem;
         color: hsl(0, 6%, 76%);
+        text-shadow: 4px 4px 4px rgba(255, 255, 255, 10%);
         border-bottom: 1px solid $dark-gray;
         transition: ease-in-out 150ms;
         &:hover {
@@ -79,6 +94,8 @@ main {
   }
 
   .flex-container {
+    outline: 1px solid greenyellow;
+
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -86,7 +103,7 @@ main {
     gap: 1rem;
     background: $dark-gray;
     width: 80vw;
-    height: 100%;
+ 
     //outline: 1px solid red;
     padding: 2rem;
     margin-top: 1rem;
@@ -126,21 +143,27 @@ main {
 }
 
 footer {
-  position: absolute;
-  bottom: 0%;
   background: $dark;
   overflow: hidden;
   width: 100vw;
-  //outline: 1px solid green;
-  .email {
+  outline: 1px solid yellow;
+  .footer-nav{
+    
+    outline: 1px solid green;
     position: absolute;
-    bottom: 1%;
-    left: 1%;
-  }
-  .linkbook {
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96vw;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    
+    svg {
+      width: 2rem;
+      .icon{fill: aliceblue;}
+    }
+    
   }
   svg {
     display: block;

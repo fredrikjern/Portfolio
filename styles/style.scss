@@ -71,20 +71,16 @@ body {
       nav {
         width: 80vw;
         max-width: 1200px;
-        outline: 1px solid greenyellow;
         margin: auto;
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+
         ul {
           display: flex;
           list-style: none;
           justify-content: space-evenly;
-          .nav-link {
-            font-size: 2rem;
+          li.nav-link {
+            font-size: 1.6rem;
             color: hsl(0, 6%, 76%);
-            text-shadow: 4px 4px 4px rgba(255, 255, 255, 10%);
+            
             border-bottom: 1px solid $dark-gray;
             transition: ease-in-out 150ms;
             &:hover {
@@ -96,7 +92,6 @@ body {
       }
 
       .flex-container {
-        outline: 1px solid greenyellow;
         margin: auto;
         display: flex;
         flex-direction: row;
@@ -104,9 +99,9 @@ body {
         justify-content: space-between;
         gap: 1rem;
         background: $dark-gray;
-        width: 80vw;
+        width: 90vw;
         padding: 2rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         transition: ease-in-out 100ms;
         p {
           color: white;
@@ -116,18 +111,20 @@ body {
           }
         }
         div {
-          flex-grow: 1;
+          
           display: flex;
+          flex-grow: 1;
+          gap: 1rem;
+          justify-content: center;
           background-color: $light-gray;
           color: aliceblue;
           border: 1px solid $dark-gray;
-          min-width: 300px;
-          min-height: 200px;
+          min-width: 260px;
+          min-height: 90px;
           padding: 4px;
           transition: ease-in-out 200ms;
           &.gallery-card {
             justify-content: flex-end;
-            
 
             &:hover {
               opacity: 60%;
@@ -151,7 +148,7 @@ body {
         .github {
           fill: rgb(0, 0, 0);
         }
-        
+
         .rock {
           @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
@@ -160,8 +157,7 @@ body {
           }
         }
         .text {
-          fill: rgb(114, 78, 78);
-          
+          fill: rgb(218, 214, 214);
         }
         .rock-mail:hover {
           transition: ease-in-out 200ms;
@@ -192,22 +188,13 @@ body {
   }
 }
 
-.translateX20 {
-  transition: ease-out 100ms;
-  transform: translateX(10px);
+@media only screen and (min-width: 896px) {
+  body {
+    .flex-container .gallery-card {
+      min-height: 200px !important;
+    }
+  }
 }
-.translateX-20 {
-  transition: ease-in 100ms;
-  transform: translateX(-8px);
-}
-
-// @media only screen and (min-width: 896px) {
-//   body {
-//     footer {
-
-//     }
-//   }
-// }
 
 @media only screen and (max-width: 600px) {
   body {
@@ -215,5 +202,32 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
     }
+    footer {
+      outline: 1px solid yellow;
+      .svg-footer {
+        width: 130vw!important;
+        .rock-git{
+          transform: translateX(-200px);
+          &:hover{
+          transform: translateX(-200px);
+
+          }
+        }
+        .rock-mail{
+          transform: translateX(-400px);
+        }
+        .text{
+          transform: translateX(-400px);
+        }
+      }
+    }
   }
+}
+.translateX20 {
+  transition: ease-out 100ms;
+  transform: translateX(10px);
+}
+.translateX-20 {
+  transition: ease-in 100ms;
+  transform: translateX(-8px);
 }

@@ -8,6 +8,8 @@ let backgroundGradient = document.querySelector(".svg-container");
 let nav = document.querySelector(".nav");
 let pageindex = 0;
 let navlinks = document.querySelectorAll(".nav-link");
+let github = document.querySelector(".rock-git");
+
 
 buildNav();
 buildHome();
@@ -83,13 +85,13 @@ function transitionGradient(
         });
       }
       // skuggor
-      shadowX += deltaShadow;
-      console.log(shadowX + "  shadowX    frame: " +frame);
-      let navlinks = document.querySelectorAll(".nav-link");
+      // shadowX += deltaShadow;
+      // console.log(shadowX + "  shadowX    frame: " +frame);
+      // let navlinks = document.querySelectorAll(".nav-link");
 
-      navlinks.forEach((navlink) => {
-        navlink.style.textShadow = `-${shadowX}px ${shadowY}px 4px rgba(255, 255, 255, 10%)`;
-      });
+      // navlinks.forEach((navlink) => {
+      //   navlink.style.textShadow = `-${shadowX}px ${shadowY}px 4px rgba(255, 255, 255, 10%)`;
+      // });
       //resolve condition
       if (frame === frames) {
         
@@ -287,3 +289,8 @@ function addListeners() {
     }
   });
 }
+github.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("kliceklle");
+  window.open("https://github.com/fredrikjern");
+});

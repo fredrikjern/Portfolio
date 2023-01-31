@@ -126,31 +126,24 @@ body .container main {
 body .container main nav {
   width: 80vw;
   max-width: 1200px;
-  outline: 1px solid greenyellow;
   margin: auto;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 body .container main nav ul {
   display: flex;
   list-style: none;
   justify-content: space-evenly;
 }
-body .container main nav ul .nav-link {
-  font-size: 2rem;
+body .container main nav ul li.nav-link {
+  font-size: 1.6rem;
   color: hsl(0deg, 6%, 76%);
-  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid hsl(220deg, 0%, 4%);
   transition: ease-in-out 150ms;
 }
-body .container main nav ul .nav-link:hover {
+body .container main nav ul li.nav-link:hover {
   color: hsl(0deg, 6%, 86%);
   border-bottom: 1px solid hsl(0deg, 6%, 16%);
 }
 body .container main .flex-container {
-  outline: 1px solid greenyellow;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -158,9 +151,9 @@ body .container main .flex-container {
   justify-content: space-between;
   gap: 1rem;
   background: hsl(220deg, 0%, 4%);
-  width: 80vw;
+  width: 90vw;
   padding: 2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   transition: ease-in-out 100ms;
 }
 body .container main .flex-container p {
@@ -171,13 +164,15 @@ body .container main .flex-container p:last-child {
   text-align: right;
 }
 body .container main .flex-container div {
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1;
+  gap: 1rem;
+  justify-content: center;
   background-color: hsl(220deg, 0%, 15%);
   color: aliceblue;
   border: 1px solid hsl(220deg, 0%, 4%);
-  min-width: 300px;
-  min-height: 200px;
+  min-width: 260px;
+  min-height: 90px;
   padding: 4px;
   transition: ease-in-out 200ms;
 }
@@ -216,7 +211,7 @@ body .container footer .svg-footer .rock:nth-child(4) {
   fill: hsl(220deg, 10%, 33%);
 }
 body .container footer .svg-footer .text {
-  fill: rgb(114, 78, 78);
+  fill: rgb(218, 214, 214);
 }
 body .container footer .svg-footer .rock-mail:hover {
   transition: ease-in-out 200ms;
@@ -242,6 +237,35 @@ body .container footer .svg-footer .rock-link:hover + .linkedin {
   fill: bisque;
 }
 
+@media only screen and (min-width: 896px) {
+  body .flex-container .gallery-card {
+    min-height: 200px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body footer {
+    outline: 1px solid yellow;
+  }
+  body footer .svg-footer {
+    width: 130vw !important;
+  }
+  body footer .svg-footer .rock-git {
+    transform: translateX(-200px);
+  }
+  body footer .svg-footer .rock-git:hover {
+    transform: translateX(-200px);
+  }
+  body footer .svg-footer .rock-mail {
+    transform: translateX(-400px);
+  }
+  body footer .svg-footer .text {
+    transform: translateX(-400px);
+  }
+}
 .translateX20 {
   transition: ease-out 100ms;
   transform: translateX(10px);
@@ -250,11 +274,4 @@ body .container footer .svg-footer .rock-link:hover + .linkedin {
 .translateX-20 {
   transition: ease-in 100ms;
   transform: translateX(-8px);
-}
-
-@media only screen and (max-width: 600px) {
-  body .flex-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 }/*# sourceMappingURL=style.css.map */

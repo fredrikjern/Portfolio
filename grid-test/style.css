@@ -1,0 +1,17 @@
+body {
+  min-height: 100vw;
+  min-width: 100vw;
+}
+body .container {
+  display: grid;
+  grid-template-rows: 1fr, auto, 1fr;
+}
+body .container header {
+  background: red;
+}
+body .container main {
+  background: green;
+}
+body .container footer {
+  background: blue;
+}/*# sourceMappingURL=style.css.map */

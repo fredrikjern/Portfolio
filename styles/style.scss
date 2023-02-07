@@ -135,54 +135,45 @@ body {
     }
     footer {
       position: absolute;
-      bottom: 0;
+      bottom: 0%;
       width: 100vw;
-      overflow: hidden;
+      //overflow: hidden;
 
-      .svg-footer {
+      .svg-footer-linkedin {
+        position: absolute;
         display: block;
-        width: 100vw;
+        left: 0;
+        bottom: 0;
         .linkedin {
-          fill: rgb(0, 0, 0);
+          fill: white;
         }
-        .github {
-          fill: rgb(0, 0, 0);
+      }
+      .svg-footer-github {
+        position: absolute;
+        display: block;
+        
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        }
+      .svg-footer-mail {
+        display: block;
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        //outline: 1px solid red;
         }
 
-        .rock {
-          @for $i from 1 through 4 {
-            &:nth-child(#{$i}) {
-              fill: hsl(220, 10%, (21%+3 * $i));
-            }
+      .rock {
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {
+            fill: hsl(220, 10%, (21%+5 * $i));
           }
         }
-        .text {
-          fill: rgb(218, 214, 214);
-        }
-        .rock-mail:hover {
-          transition: ease-in-out 200ms;
-          transform: scaleY(1.1);
-          + .text {
-            fill: white;
-          }
-        }
-        .rock-git:hover {
-          transition: ease-in-out 200ms;
-          transform: translateY(-4px);
-          + .github {
-            transition: ease-in-out 300ms;
-
-            fill: bisque;
-          }
-        }
-        .rock-link:hover {
-          transition: ease-in-out 200ms;
-          transform: translateY(-4px);
-          + .linkedin {
-            transition: ease-in-out 300ms;
-            fill: bisque;
-          }
-        }
+      }
+      .text {
+        fill: rgb(221, 25, 25);
       }
     }
   }

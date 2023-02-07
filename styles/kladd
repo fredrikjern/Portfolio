@@ -1,0 +1,24 @@
+.rock-mail:hover {
+        transition: ease-in-out 200ms;
+        transform: scaleY(1.1);
+        + .text {
+          fill: white;
+        }
+      }
+      .rock-git:hover {
+        transition: ease-in-out 200ms;
+        transform: translateY(-4px);
+        + .github {
+          transition: ease-in-out 300ms;
+
+          fill: bisque;
+        }
+      }
+      .rock-link:hover {
+        transition: ease-in-out 200ms;
+        transform: translateY(-4px);
+        + .linkedin {
+          transition: ease-in-out 300ms;
+          fill: bisque;
+        }
+      }

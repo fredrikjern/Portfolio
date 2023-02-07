@@ -184,57 +184,45 @@ body .container main .flex-container div.gallery-card:hover {
 }
 body .container footer {
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
   width: 100vw;
-  overflow: hidden;
 }
-body .container footer .svg-footer {
+body .container footer .svg-footer-linkedin {
+  position: absolute;
   display: block;
-  width: 100vw;
+  left: 0;
+  bottom: 0;
 }
-body .container footer .svg-footer .linkedin {
-  fill: rgb(0, 0, 0);
-}
-body .container footer .svg-footer .github {
-  fill: rgb(0, 0, 0);
-}
-body .container footer .svg-footer .rock:nth-child(1) {
-  fill: hsl(220deg, 10%, 24%);
-}
-body .container footer .svg-footer .rock:nth-child(2) {
-  fill: hsl(220deg, 10%, 27%);
-}
-body .container footer .svg-footer .rock:nth-child(3) {
-  fill: hsl(220deg, 10%, 30%);
-}
-body .container footer .svg-footer .rock:nth-child(4) {
-  fill: hsl(220deg, 10%, 33%);
-}
-body .container footer .svg-footer .text {
-  fill: rgb(218, 214, 214);
-}
-body .container footer .svg-footer .rock-mail:hover {
-  transition: ease-in-out 200ms;
-  transform: scaleY(1.1);
-}
-body .container footer .svg-footer .rock-mail:hover + .text {
+body .container footer .svg-footer-linkedin .linkedin {
   fill: white;
 }
-body .container footer .svg-footer .rock-git:hover {
-  transition: ease-in-out 200ms;
-  transform: translateY(-4px);
+body .container footer .svg-footer-github {
+  position: absolute;
+  display: block;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-body .container footer .svg-footer .rock-git:hover + .github {
-  transition: ease-in-out 300ms;
-  fill: bisque;
+body .container footer .svg-footer-mail {
+  display: block;
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
 }
-body .container footer .svg-footer .rock-link:hover {
-  transition: ease-in-out 200ms;
-  transform: translateY(-4px);
+body .container footer .rock:nth-child(1) {
+  fill: hsl(220deg, 10%, 26%);
 }
-body .container footer .svg-footer .rock-link:hover + .linkedin {
-  transition: ease-in-out 300ms;
-  fill: bisque;
+body .container footer .rock:nth-child(2) {
+  fill: hsl(220deg, 10%, 31%);
+}
+body .container footer .rock:nth-child(3) {
+  fill: hsl(220deg, 10%, 36%);
+}
+body .container footer .rock:nth-child(4) {
+  fill: hsl(220deg, 10%, 41%);
+}
+body .container footer .text {
+  fill: rgb(221, 25, 25);
 }
 
 @media only screen and (min-width: 896px) {
